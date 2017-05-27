@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Luxure Mobile Application</title>
+<meta charset="UTF-8">
+<meta name="msapplication-tap-highlight" content="yes" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/jquerymobile.css">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="phonegap.js"></script>
+</head>
+
+<body>
+
+<!-- splash screen -->
+
+<div data-role="page" id="splash" class="homebg" data-transition="slide">			
+	<div role="main" class="ui-content">
+		<div class="container-fluid">
+				<div class="container">
+					<div class="row">
+				
+						
+					
+						
+						<div class="herologo text-center">
+						<img src="images/luxlogoyellow.png" alt="luxlogo" width="200" height="83" />
+						</div>
+						<form id="signinform" method="post" class="text-left">
+			
+					<div class="form-group">
+					
+					<div class="input-group">
+      <div class="input-group-addon"><div class="lnr lnr-envelope"></div> </div>
+     
+    
+						
+						<input type="email" class="formfield" id="email" name="email" placeholder="Email Address">
+						 
+						</div>
+						<label for="email" generated="true" class="form-invalid"></label>
+					</div>
+					<div class="form-group">
+					<div class="input-group">
+      <div class="input-group-addon"><div class="lnr lnr-lock"></div></div>
+						
+						<input type="password" class="formfield" id="password" name="password" placeholder="Password">
+						
+						</div>
+						 <label for="password" generated="true" class="form-invalid"></label>
+					</div>
+			
+				<input type="hidden" name="signin" value="1">
+		
+		<div class="text-center">
+									<button type="submit" name="submit" id="signinformbutton" class="yellowbutton">SIGN IN  <span class="lnr lnr-arrow-right"></span></button>
+								</div>
+		
+		
+		</form>
+						
+					</div>
+		
+					<div class="row hyperlinks">
+						<div class="col-xs-6 text-right rightborder"><a href="#createaccount" data-transition="slide">CREATE ACCOUNT</a></div>
+						<div class="col-xs-6 text-left"><a href="#forgot">FORGOT PASSWORD</a></div>
+					</div>
+				</div>
+		</div>
+	</div> 
+</div> 
+<!-- end splash page -->	
+
+
+
+<!-- Start of second page -->
+<div data-role="page" id="createaccount">
+
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+	<div role="main" class="ui-content">
+	
+	<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">Create Account</h2>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+		<!-- Main Form -->
+		<div class="text-center">
+	<div class="login-form-1">
+		<form class="text-left" name="userreg" method="post" id="userreg">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+				<div class="form-group">
+						<label for="fname" class="sr-only">First Name</label>
+						<input type="text" class="form-control" id="fname" name="fname" placeholder="first name">
+					</div>
+					<div class="form-group">
+						<label for="lname" class="sr-only">Last Name</label>
+						<input type="text" class="form-control" id="lname" name="lname" placeholder="last name">
+					</div>
+					<div class="form-group">
+						<label for="phone" class="sr-only">Phone</label>
+						<input type="tel" class="form-control" id="phone" name="phone" placeholder="phone">
+					</div>
+					<div class="form-group">
+						<label for="email" class="sr-only">Email address</label>
+						<input type="email" class="form-control" id="emailaddress" name="email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="passwordtwo" name="password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="password_again" class="sr-only">Password Confirm</label>
+						<input type="password" class="form-control" id="password_again" name="password_again" placeholder="confirm password">
+					</div>
+					
+					
+					
+				</div>
+				<input type="hidden" name="userreg" value="form1">
+				<button type="submit" id="loginbutton" class="yellowbutton">SIGN UP</button>
+			</div>
+			<div class="text-center">
+			<br><br>
+				<p>already have an account? <a href="#splash" data-transition="slide">login here</a></p>
+			</div>
+		</form>
+		</div>
+	</div>
+	<!-- end:Main Form -->
+	</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!-- Start of dashboard page -->
+<div data-role="page" id="dashboard" data-transition="slide" >
+
+	<div data-role="header" class="header" data-position="fixed">
+	<a href="tel:773-675-9442"><span class="lnr lnr-phone-handset"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+	<div role="main" class="ui-content">
+	
+	<div class="se-pre-con"></div>
+	<div class="overlay">
+		<div class="title">
+			<h2 class="text-center">Hi <span id="firstname"></span>!</h2>
+		</div>
+	
+		<div class="mainheader">
+	
+	
+		</div>
+	
+	</div>
+	<!-- <h2 class="text-center"><span id="date"></span></h2>-->
+	<div class="homeicons">
+	<div class="row">
+	<div class="col-xs-6 text-center mainicon top"><a href="https://app.shedul.com/online_bookings/8778/link" data-transition="slide" target="_blank"><span class="lnr lnrhome lnr-calendar-full"></span> <span class="hometitle">Book Appointment</span></a></div>
+	<div class="col-xs-6 text-center mainicon top"><a href="#team" data-transition="slide"><span class="lnr lnrhome lnr-users"></span> <span class="hometitle">Our Team</span> </a></div>
+	<div class="col-xs-6 text-center mainicon bottom"><a href="sms:773-675-9442" data-transition="slide"><span class="lnr lnrhome lnr-smartphone"></span> <span class="hometitle">Send Text</span> </a></div>
+	<div class="col-xs-6 text-center mainicon bottom"><a href="#contact" data-transition="slide"><span class="lnr lnrhome lnr-map-marker"></span><span class="hometitle">Hours & Location</span> </a></div>
+	</div>
+	</div>
+	</div>
+</div> <!-- end page -->
+
+
+
+
+<!-- Start of second page: #news -->
+<div data-role="page" id="team" >
+
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+
+	
+	<div role="main" class="ui-content" id="address">
+	<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">Our Team</h2>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+	<div class="row moveup">
+	<div class="col-xs-6 text-center"><br><br><a href="https://app.shedul.com/online_bookings/8778/link" target="_blank"><img src="images/claudia.png" alt="claudia" width="100" height="100" /></a><br><span class="hometitle">Claudia</span></div>	
+	<div class="col-xs-6 text-center"><br><br><a href="https://app.shedul.com/online_bookings/8778/link" target="_blank"><img src="images/hefzi.png" alt="hefzi" width="101" height="105" /></a><br><span class="hometitle">Hefzi</span></div>
+	</div>
+	
+	<div class="row moveup">
+	<div class="col-xs-6 text-center"><br><br><a href="https://app.shedul.com/online_bookings/8778/link" target="_blank"><img src="images/kalpna.png" alt="kalpna" width="108" height="109" /></a><br><span class="hometitle">Kalpna</span></div>	
+	<div class="col-xs-6 text-center"><br><br><a href="https://app.shedul.com/online_bookings/8778/link" target="_blank"><img src="images/maria.png" alt="maria" width="104" height="111" /></a><br><span class="hometitle">Maria</span></div>
+	<div class="col-xs-6 text-center"><br><br><a href="https://app.shedul.com/online_bookings/8778/link" target="_blank"><img src="images/labrina.png" alt="maria" width="104" height="111" /></a><br><span class="hometitle">La'Brina</span></div>
+	</div>
+	
+		</div>
+	
+		</div>
+	
+	
+</div>	<!-- /team page -->
+
+
+<!-- Start of contact page -->
+<div data-role="page" id="contact" data-transition="slide">
+
+<!-- header -->
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+
+	<div role="main" class="ui-content">
+		<div class="se-pre-con"></div>
+		<div id="contactpage">
+			<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">Contact Us</h2>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+		
+	<div class="text-center">
+		<br><br><br>
+		Luxure Nail and Beauty Bar <br>
+		3754 West 111th Street <br>
+		Chicago, IL 60655 <br>
+		<a href="tel:773-675-9442">773.675.9442 </a><br><br>
+		www.LuxureNailBar.com <br>
+		<a href="mailto:admin@luxurenailbar.com">admin@luxurenailbar.com</a> <br><br>
+		Monday - Friday <br>
+		10:00am - 7:00pm <br>
+		Saturday 9:00am - 5:00pm <br><br>
+		<a href="https://www.facebook.com/LuxureNailAndBeautyBar/" target="_blank" class="btn btn-lg button-link">Facebook</a><br><br>
+		<a href="https://twitter.com/luxurenailbar?lang=en" target="_blank" class="btn btn-lg button-link">Twitter </a> <br><br>
+		<a href="https://www.instagram.com/luxurenailbar/" target="_blank"  class="btn btn-lg button-link">Instagram</a>
+	</div>
+
+
+</div> <!-- end contact page -->
+</div> <!-- end main content div -->
+</div><!-- /contact page -->
+
+
+
+<!-- Start of forgot password page -->
+<div data-role="page" id="forgot" data-transition="slide">
+
+<!-- header -->
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+
+	<div role="main" class="ui-content">
+		
+		<div id="contactpage">
+			<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">Forgot Password</h2>
+					<br/>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+		
+	<form id="forgotpassword" name="forgotpassword" method="post">
+	
+		<input type="text" class="form-control" name="email" id="forgotemail"  placeholder="email address">
+		
+		<input type="hidden" name="passwordreset" id="passwordreset" value="1">
+		
+		<input type="submit" name="submit" id="#forgotbutton" class="yellowbutton" value="SUBMIT">
+	
+	</form>
+	
+	
+	
+</div> <!-- end contact page -->
+</div> <!-- end main content div -->
+</div><!-- /forgot password page -->
+
+
+
+<!-- Start of enter validation page -->
+<div data-role="page" id="entertemppassword" data-transition="slide">
+
+<!-- header -->
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+
+	<div role="main" class="ui-content">
+		
+		<div id="contactpage">
+			<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">ENTER VALIDATION CODE</h2>
+						<span class="small">Please check your email for validation code.</span>
+					<br/>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+		
+	<form id="validatecode" name="validatecode" method="post">
+	
+		<input type="text" class="form-control" name="valcode" id="valcode"  placeholder="Enter Validation Code">
+		
+		<input type="hidden" name="valpost" id="valpost" value="1">
+		
+		<input type="submit" name="submit" id="validationbutton" class="yellowbutton" value="VALIDATE CODE">
+	
+	</form>
+</div> <!-- end contact page -->
+</div> <!-- end main content div -->
+</div><!-- end validation page -->
+
+
+<!-- Start of check password page -->
+<div data-role="page" id="changepassword" data-transition="slide">
+
+<!-- header -->
+<div data-role="header" class="header" data-position="fixed">
+	<a data-rel="back"><span class="lnr lnr-chevron-left"></span></a>
+
+	<h1><a href="#dashboard"><img src="images/luxlogo.png" alt="Luxure-Transparent-Logo" width="75" height="" /></a></h1>
+	
+<a href="" id="logout"><span class="lnr lnr-exit"></span></a>
+</div>
+
+
+	<div role="main" class="ui-content">
+		
+		<div id="contactpage">
+			<div class="overlay">
+				<div class="title">
+					<h2 class="text-center">ENTER NEW PASSWORD</h2>
+						<span class="small">Create your new password.</span>
+					<br/>
+				</div> <!-- end title -->
+	
+		
+		</div> <!-- end overlay -->
+		
+	<form id="newpassword" name="newpassword" method="post">
+	
+		<input type="password" class="form-control" name="password" id="password"  placeholder="Enter New Password">
+		<input type="hidden" name="email" id="changeemail" value=""/>
+		<input type="hidden" name="newpass" id="newpass" value="1">
+		
+		<input type="submit" name="submit" id="newpasswordbutton" class="yellowbutton" value="SUBMIT">
+	
+	</form>
+	
+	
+	
+</div> <!-- end contact page -->
+</div> <!-- end main content div -->
+</div><!-- end validation page -->
+
+
+
+
+
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/jquery-1.4.1.js"></script>
+	<script src="js/jqueryui.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+	<script src="js/script.js"></script>
+	</body>
+</html><!DOCTYPE html>
